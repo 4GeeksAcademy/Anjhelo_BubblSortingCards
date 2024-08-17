@@ -116,22 +116,21 @@ sortButton.addEventListener("click", () => {
         cartasOrdenadas[index + 1] = aux;
 
         //
-      }
+        let contenedor = document.createElement("div");
+        contenedor.classList.add("pasos");
 
-      let contenedor = document.createElement("div");
-      contenedor.classList.add("pasos");
-
-      for (let i = 0; i < cartasOrdenadas.length; i++) {
-        divOrden.appendChild(contenedor);
-        let cartaOrden = document.createElement("div");
-        cartaOrden.classList.add("card");
-        cartaOrden.innerHTML = cartasOrdenadas[i].codigo;
-        contenedor.appendChild(cartaOrden);
+        for (let i = 0; i < cartasOrdenadas.length; i++) {
+          divOrden.appendChild(contenedor);
+          let cartaOrden = document.createElement("div");
+          cartaOrden.classList.add("card");
+          cartaOrden.innerHTML = cartasOrdenadas[i].codigo;
+          contenedor.appendChild(cartaOrden);
+        }
       }
       index++;
     }
     wall--;
   }
 
-  console.log(cartasOrdenadas);
+  // console.log(cartasOrdenadas);
 });
